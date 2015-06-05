@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopClient", "DesktopClient\DesktopClient.csproj", "{4C8D0DE1-A795-49C7-8985-288D74F366AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopClient.Tests", "DesktopClient.Tests\DesktopClient.Tests.csproj", "{3A5726B8-DD81-4ECD-AD30-0426B06C3878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C8D0DE1-A795-49C7-8985-288D74F366AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8D0DE1-A795-49C7-8985-288D74F366AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8D0DE1-A795-49C7-8985-288D74F366AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8D0DE1-A795-49C7-8985-288D74F366AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5726B8-DD81-4ECD-AD30-0426B06C3878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5726B8-DD81-4ECD-AD30-0426B06C3878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5726B8-DD81-4ECD-AD30-0426B06C3878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5726B8-DD81-4ECD-AD30-0426B06C3878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
