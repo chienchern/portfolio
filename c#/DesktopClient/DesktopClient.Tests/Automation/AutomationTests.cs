@@ -12,7 +12,7 @@ namespace DesktopClient.Tests.Automation
     {
         private readonly MainWindowDriver mainWindowDriver = new MainWindowDriver();
 
-        [Test]
+        [Test, Explicit]
         public void ShowThatAnUnhandledExceptionCanFailTheTest()
         {
             BeforeEachTest();

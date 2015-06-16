@@ -2,8 +2,8 @@
 {
     public interface IOrder
     {
-        string Customer { get; set; }
         string Id { get; set; }
+        string Customer { get; set; }
         string Product { get; set; }
         string Quantity { get; set; }
     }

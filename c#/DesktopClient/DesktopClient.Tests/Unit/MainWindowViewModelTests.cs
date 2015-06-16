@@ -13,7 +13,7 @@ namespace DesktopClient.Tests.Unit
         [Test]
         public void WhenNewOrderIsCreated_ThenItIsAddedToListOfOrders()
         {
-            var expectedOrder = new Order("SomeCustomer", "SomeGuid", "SomeProduct", "SomeQuantity" );
+            var expectedOrder = new Order("SomeGuid", "SomeCustomer", "SomeProduct", "SomeQuantity");
             var newOrderFormViewModel = new Mock<INewOrderFormViewModel>();
             Func<INewOrderFormViewModel> newOrderFormViewModelFactory = () => newOrderFormViewModel.Object;
 

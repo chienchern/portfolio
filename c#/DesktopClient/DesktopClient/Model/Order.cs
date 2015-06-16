@@ -12,24 +12,24 @@ namespace DesktopClient.Model
         private string product;
         private string quantity;
 
-        public Order(string customer, string id, string product, string quantity)
+        public Order(string id, string customer, string product, string quantity)
         {
-            this.customer = customer;
             this.id = id;
+            this.customer = customer;
             this.product = product;
             this.quantity = quantity;
-        }
-
-        public string Customer
-        {
-            get { return customer; }
-            set { SetValue(ref customer, value); }
         }
 
         public string Id
         {
             get { return id; }
             set { SetValue(ref id, value); }
+        }
+
+        public string Customer
+        {
+            get { return customer; }
+            set { SetValue(ref customer, value); }
         }
 
         public string Product
