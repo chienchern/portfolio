@@ -46,19 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Automation\AppUnhandledExceptionHelper.cs" />
     <Compile Include="Automation\AutomationTests.cs" />
-    <Compile Include="Automation\MainWindowDriver.cs" />
-    <Compile Include="Automation\MainWindowGridDriver.cs" />
-    <Compile Include="Automation\MainWindowNewOrderButtonDriver.cs" />
-    <Compile Include="Automation\NewOrderFormDriver.cs" />
-    <Compile Include="Automation\TestSerializer.cs" />
+    <Compile Include="Automation\Driver\MainWindowDriver.cs" />
+    <Compile Include="Automation\Helper\AppUnhandledExceptionHelper.cs" />
+    <Compile Include="Automation\Driver\MainWindowGridDriver.cs" />
+    <Compile Include="Automation\Driver\MainWindowNewOrderButtonDriver.cs" />
+    <Compile Include="Automation\Driver\NewOrderFormDriver.cs" />
+    <Compile Include="Automation\Helper\TestSerializer.cs" />
     <Compile Include="Helper\UiHelper.cs" />
     <Compile Include="Helper\Wait.cs" />
     <Compile Include="Helper\DataGridViewRowHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\MainWindowViewModelTests.cs" />
     <Compile Include="Unit\NewOrderFormViewModelTests.cs" />
+    <Compile Include="Unit\OrderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

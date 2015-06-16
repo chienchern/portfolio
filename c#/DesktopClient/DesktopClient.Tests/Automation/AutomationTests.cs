@@ -1,5 +1,7 @@
 ﻿using System;
-using DesktopClient.Extensions;
+using DesktopClient.Extension;
+using DesktopClient.Tests.Automation.Driver;
+using DesktopClient.Tests.Automation.Helper;
 using DesktopClient.Tests.Helper;
 using NUnit.Framework;
 

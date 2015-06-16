@@ -1,6 +1,6 @@
 using System;
 
-namespace DesktopClient.Extensions
+namespace DesktopClient.Extension
 {
     public static class StringExtensions
     {

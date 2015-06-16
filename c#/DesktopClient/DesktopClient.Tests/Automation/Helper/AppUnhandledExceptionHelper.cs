@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DesktopClient.Tests.Automation
+namespace DesktopClient.Tests.Automation.Helper
 {
     internal class AppUnhandledExceptionHelper
     {

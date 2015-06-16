@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DesktopClient.Tests.Helper;
 using DesktopClient.View;
 
-namespace DesktopClient.Tests.Automation
+namespace DesktopClient.Tests.Automation.Driver
 {
     internal class MainWindowGridDriver
     {

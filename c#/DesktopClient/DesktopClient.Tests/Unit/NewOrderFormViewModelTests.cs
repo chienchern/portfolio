@@ -1,4 +1,4 @@
-﻿using DesktopClient.Extensions;
+﻿using DesktopClient.Extension;
 using DesktopClient.Model;
 using DesktopClient.ViewModel;
 using NUnit.Framework;

@@ -6,6 +6,7 @@ namespace DesktopClient.Model
     public class Order : IOrder, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
         private string customer;
         private string id;
         private string product;
@@ -43,19 +44,13 @@ namespace DesktopClient.Model
             set { SetValue(ref quantity, value); }
         }
 
-        private void SetValue<T>(ref T currentValue, T newValue)
+        private void SetValue<T>(ref T currentValue, T newValue, [CallerMemberName] string propertyName = "")
         {
-            if (currentValue.Equals(newValue)) 
+            if (Equals(currentValue, newValue)) 
                 return;
             
             currentValue = newValue;
-            RaisePropertyChanged();
-        }
-
-        private void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        {
             PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
-        
     }
 }

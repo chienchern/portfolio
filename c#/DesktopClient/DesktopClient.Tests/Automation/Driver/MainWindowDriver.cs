@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
+using DesktopClient.Tests.Automation.Helper;
 using DesktopClient.Tests.Helper;
 using DesktopClient.View;
 
-namespace DesktopClient.Tests.Automation
+namespace DesktopClient.Tests.Automation.Driver
 {
     internal class MainWindowDriver
     {

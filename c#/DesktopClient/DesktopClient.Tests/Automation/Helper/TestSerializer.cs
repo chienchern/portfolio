@@ -1,6 +1,6 @@
-﻿using System.Threading;
+using System.Threading;
 
-namespace DesktopClient.Tests.Automation
+namespace DesktopClient.Tests.Automation.Helper
 {
     internal static class TestSerializer
     {
