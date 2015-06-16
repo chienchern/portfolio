@@ -7,12 +7,14 @@ namespace DesktopClient.Model
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string customer;
+        private string id;
         private string product;
         private string quantity;
 
-        public Order(string customer, string product, string quantity)
+        public Order(string customer, string id, string product, string quantity)
         {
             this.customer = customer;
+            this.id = id;
             this.product = product;
             this.quantity = quantity;
         }
@@ -22,13 +24,19 @@ namespace DesktopClient.Model
             get { return customer; }
             set { SetValue(ref customer, value); }
         }
-        
+
+        public string Id
+        {
+            get { return id; }
+            set { SetValue(ref id, value); }
+        }
+
         public string Product
         {
             get { return product; }
             set { SetValue(ref product, value); }
         }
-        
+
         public string Quantity
         {
             get { return quantity; }

@@ -4,6 +4,11 @@ namespace DesktopClient.Tests.Helper
 {
     public static class DataGridViewRowHelper
     {
+        public static string GetId(DataGridViewRow row)
+        {
+            return GetValue(row, "Id");
+        }
+
         public static string GetCustomerValue(DataGridViewRow row)
         {
             return GetValue(row, "Customer");
@@ -13,7 +18,7 @@ namespace DesktopClient.Tests.Helper
         {
             return GetValue(row, "Product");
         }
-        
+
         public static string GetQuantityValue(DataGridViewRow row)
         {
             return GetValue(row, "Quantity");

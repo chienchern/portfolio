@@ -35,7 +35,8 @@ namespace DesktopClient.Tests.Automation
         {
             foreach (DataGridViewRow row in mainWindow.Grid.Rows)
             {
-                if (rowPredicates.All(rp => rp(row)))
+                var localRow = row;
+                if (rowPredicates.All(rp => rp(localRow)))
                     return true;
             }
 

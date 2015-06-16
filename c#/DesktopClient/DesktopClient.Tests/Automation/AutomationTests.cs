@@ -1,4 +1,5 @@
 ﻿using System;
+using DesktopClient.Extensions;
 using DesktopClient.Tests.Helper;
 using NUnit.Framework;
 
@@ -8,12 +9,6 @@ namespace DesktopClient.Tests.Automation
     public class AutomationTests
     {
         private readonly MainWindowDriver mainWindowDriver = new MainWindowDriver();
-        
-        [TestFixtureTearDown]
-        public void AfterAllTests()
-        {
-            mainWindowDriver.CloseMainWindowIfNecessary();
-        }
 
         [Test]
         public void ShowThatAnUnhandledExceptionCanFailTheTest()
@@ -36,17 +31,20 @@ namespace DesktopClient.Tests.Automation
             const int timeOutInMillis = 2 * 1000;
             
             NewOrderFormDriver newOrderFormDriver;
-            Assert.True(mainWindowDriver.ClickNewOrderButton(timeOutInMillis, out newOrderFormDriver), "New order form was not shown.");
+            var wasNewOrderFormCreated = mainWindowDriver.ClickNewOrderButton(timeOutInMillis, out newOrderFormDriver);
+            Assert.True(wasNewOrderFormCreated, "New order form was not shown.");
 
             newOrderFormDriver.Populate(customer, product, quantity);
             newOrderFormDriver.SubmitOrder();
-            Assert.True(newOrderFormDriver.WaitForNewOrderFormToBeClosed(timeOutInMillis), "New order form was not closed.");
+            var wasNewOrderFormClosed = newOrderFormDriver.WaitForNewOrderFormToBeClosed(timeOutInMillis);
+            Assert.True(wasNewOrderFormClosed, "New order form was not closed.");
 
             var result = mainWindowDriver.CheckGridHasRow(
+                r => DataGridViewRowHelper.GetId(r).IsGuid(),
                 r => customer == DataGridViewRowHelper.GetCustomerValue(r),
                 r => product == DataGridViewRowHelper.GetProductValue(r),
                 r => quantity == DataGridViewRowHelper.GetQuantityValue(r));
-            Assert.True(result, "Newly submitted order was not displayed in the grid.");
+            Assert.True(result, "Newly submitted order was not correctly displayed in the grid.");
 
             AfterEachTest();
         }
@@ -81,6 +79,12 @@ namespace DesktopClient.Tests.Automation
                 mainWindowDriver.CloseMainWindowIfNecessary();
 
             Assert.That(exception, Is.Null, string.Format("Unhandled exception:{0}{1}", Environment.NewLine, exception));
+        }
+
+        [TestFixtureTearDown]
+        public void AfterAllTests()
+        {
+            mainWindowDriver.CloseMainWindowIfNecessary();
         }
     }
 }
